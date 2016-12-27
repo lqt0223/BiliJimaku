@@ -1,0 +1,42 @@
+{
+	"manifest_version": 2,
+	"name": "BiliJimaku",
+	"description": "快速添加弹幕，特别为生肉翻译优化",
+	"version": "1.0",
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "点击重启"
+	},
+	"options_page": "options.html",
+	"permissions": [
+        "tabs", "notifications"
+    ],
+	"content_scripts": [
+		{
+			"matches": ["*://www.bilibili.com/*"],
+			"js": ["content.js"]
+        }
+    ],
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"commands": {
+		"previous": {
+			"description": "后退",
+			"global": true
+		},
+		"next": {
+			"description": "前进",
+			"global": true
+		},
+		"pause": {
+			"description": "播放/暂停",
+			"global": true
+		},
+		"notify": {
+			"description": "显示正在播放",
+			"global": true
+		}
+	},
+	"web_accessible_resources":["images/*","templates/*"]
+}

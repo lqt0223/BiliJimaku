@@ -1,0 +1,56 @@
+<style type="text/css">
+	.textarea-wrapper{
+		position: absolute;
+		left:0px;
+		top:0px;
+		opacity:0.0;
+		background-image: url(bottom.png);
+		width: 1160px;
+		height: 140px;
+		transition:opacity 0.5s;
+		-webkit-transition:opacity 0.5s; /* Safari */
+	}
+	.textarea-wrapper:hover{
+		opacity: 1.0;
+	}
+	#textarea{
+		position: absolute;
+		left:221px;
+		top:32px;
+		width: 657px;
+		height:60px;
+		background: transparent;
+		border-style: none;
+		outline: none;
+		color: white;
+		font-size: 31px;
+		font-family: "Microsoft Yahei";
+		/*white-space: nowrap;*/
+		line-height: 60px;
+	}
+	#setting{
+		position: absolute;
+		left:891px;
+		top:39px;
+		width: 51px;
+		height: 51px;
+	}
+	#list{
+		position:absolute;
+		left: 950px;
+		top:39px;
+		width: 51px;
+		height: 51px;
+	}
+</style>
+<div class="textarea-wrapper">
+	<input type="input" id="textarea">
+	<span id="setting"></span>
+	<span id="list"></span>
+</div>
+<script type="text/javascript">
+	var setting = document.getElementById("setting");
+	setting.onclick = function() {
+		window.alert("hello, setting");
+	}
+</script>
